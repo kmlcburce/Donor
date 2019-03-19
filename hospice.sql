@@ -1,4 +1,5 @@
 -- phpMyAdmin SQL Dump
+<<<<<<< HEAD
 -- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
@@ -10,6 +11,17 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
+=======
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 11, 2019 at 11:57 AM
+-- Server version: 10.1.21-MariaDB
+-- PHP Version: 7.1.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+>>>>>>> f7d209232cbe1f92d1a40c8ee31d2369b674169f
 SET time_zone = "+00:00";
 
 
@@ -25,6 +37,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
 -- Table structure for table `donor_table`
 --
 
@@ -102,6 +115,31 @@ CREATE TABLE `user_table` (
   `u_fname` varchar(128) NOT NULL,
   `u_lname` varchar(128) NOT NULL,
   `u_type` int(128) NOT NULL DEFAULT '1'
+=======
+-- Table structure for table `details`
+--
+
+CREATE TABLE `details` (
+  `id` int(128) UNSIGNED ZEROFILL NOT NULL,
+  `location` varchar(255) NOT NULL,
+  `bloodtype` varchar(255) NOT NULL,
+  `boodytype` varchar(255) NOT NULL,
+  `organtype` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `u_id` int(128) UNSIGNED ZEROFILL NOT NULL,
+  `u_name` varchar(255) NOT NULL,
+  `u_email` varchar(255) NOT NULL,
+  `u_pass` varchar(255) NOT NULL,
+  `u_cpass` varchar(255) NOT NULL
+>>>>>>> f7d209232cbe1f92d1a40c8ee31d2369b674169f
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -109,6 +147,7 @@ CREATE TABLE `user_table` (
 --
 
 --
+<<<<<<< HEAD
 -- Indexes for table `donor_table`
 --
 ALTER TABLE `donor_table`
@@ -133,12 +172,25 @@ ALTER TABLE `resource_table`
 ALTER TABLE `user_table`
   ADD PRIMARY KEY (`u_id`),
   ADD UNIQUE KEY `fk_r_id` (`r_id`);
+=======
+-- Indexes for table `details`
+--
+ALTER TABLE `details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`u_id`);
+>>>>>>> f7d209232cbe1f92d1a40c8ee31d2369b674169f
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
+<<<<<<< HEAD
 -- AUTO_INCREMENT for table `donor_table`
 --
 ALTER TABLE `donor_table`
@@ -163,6 +215,17 @@ ALTER TABLE `user_table`
   MODIFY `u_id` int(128) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT;
 COMMIT;
 
+=======
+-- AUTO_INCREMENT for table `details`
+--
+ALTER TABLE `details`
+  MODIFY `id` int(128) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `u_id` int(128) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT;
+>>>>>>> f7d209232cbe1f92d1a40c8ee31d2369b674169f
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
