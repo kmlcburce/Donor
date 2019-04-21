@@ -1,6 +1,8 @@
 <?php 
 
-
+	//adds stuff to resource_table via query1
+	//adds stuff to donor_table via query 2 
+	//all in 1 form
 
 
 
@@ -36,7 +38,7 @@
 				<div class="row">
 					<div class="col-lg-8 col-md-8">
 						<h3 class="mb-30 title_color">Form Element</h3>
-						<form action="http://localhost/Donor2/Hospice/Welcome/donorform" method="POST">
+						<form action="<?php echo base_url('Welcome/donorform')?>" method="POST">
 							<div class="mt-10">
 								<input type="text" name="fname" placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'"
 								 required class="single-input">

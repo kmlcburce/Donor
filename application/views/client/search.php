@@ -1,4 +1,13 @@
+<?php
+        
+                $conn = mysqli_connect("localhost","root","","hospice");
+                if(!$conn){
+                        die('Not connected to Database'.mysqli_connect_error());
+                }else{
+                	$rs = mysqli_query($conn,"SELECT * FROM product_profile");
 
+
+?>
 
 	<!--================ Banner Area =================-->
 	<section class="banner_area">
@@ -54,9 +63,54 @@
     	</button>
 	</form>
 	</section>
+	<div>
+		<div class="container" >
+            <form class="table">
+              <table class="table table-striped table-sm" >
+                  <thead>
+                      <tr>
+                          
+                          <td>Donor ID</td>
+                          <td>Address</td>
+                          <td>Organ Type</td>
+                          <td>Blood Type</td>
+                          <td>Body Type</td>
+                          
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <?php 
+                      if($get_resource->num_rows() >0) 
+                      {
+                        foreach ($get_resource->result() as $row) {
+                          ?>
+                          <tr>
+                            
+                            <td><?php echo $row->donor_id; ?></td>
+                            <td><?php echo $row->address; ?></td>
+                            <td><?php echo $row->organ_type; ?></td>
+                            <td><?php echo $row->blood_type; ?></td>
+                            <td><?php echo $row->body_type; ?></td>
+                            
+                          </tr>
+                          <?php 
+                        }
+                      }
+                      else{
+                        ?>
+                        <tr>
+                          <td colspan="5">No Data Found</td>
+                        </tr>
+                        <?php
+                      }
+                      ?>
+                  </tbody>
+              </table>
+            </form>
+            </div>
 
-
-
-
-
+	</div>
+<?php
+}
+?>
 

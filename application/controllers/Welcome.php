@@ -27,8 +27,12 @@ class Welcome extends CI_Controller {
 	}
 	public function search()
 	{
+		$this->load->model("model_admin");
+		$data["get_resource"] = $this->model_admin->get_resource();
+		
+
 		$this->load->view('client/header');
-		$this->load->view('client/search');
+		$this->load->view('client/search', $data);
 		$this->load->view('client/footer');
 	}
 	public function blog(){

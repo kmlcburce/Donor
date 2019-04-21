@@ -10,7 +10,7 @@
 					<div class="col-lg-12">
 						<h1>We Care for Your Health Every Moment</h1>
 						<p>Searching for organ donor members near you has never been made easier.</p>
-						<a class="main_btn mr-10" href="http://localhost/Donor2/Hospice/Welcome/search">get started</a>
+						<a class="main_btn mr-10" href="<?php echo base_url('Welcome/search')?>">get started</a>
 					</div>
 				</div>
 			</div>
