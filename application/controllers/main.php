@@ -22,7 +22,9 @@ class main extends CI_Controller {
 	{
 		$this->load->model("model_admin");
 		$data["get_resource"] = $this->model_admin->get_resource();
+		$this->load->view("admin/admin_header");
 		$this->load->view("admin/admin_index",$data);
+		$this->load->view("admin/admin_footer");
 	}
 		public function login()
 	{
@@ -98,7 +100,7 @@ class main extends CI_Controller {
 		$prod_id = $this->uri->segment(3);
 		$this->load->model("model_admin");
 		$data["product_data"] = $this->model_admin->fetch_single_product($prod_id);
-		$data["fetch_product_data"] = $this->Admin_model->fetch_product_data();
+		$data["fetch_product_data"] = $this->model_admin->fetch_product_data();
 		$this->load->view("/main/index",$data);
 	}
 	function fetch_single_product($item_id){
@@ -107,19 +109,13 @@ class main extends CI_Controller {
 		return $query;
 	}
 	
-	public function delete_branch()
+	
+	public function delete_item()
 	{
-		$u_id = $this->uri->segment(3);
-		$this->load->model("Admin_model");
-		$this->Admin_model->delete_branch($u_id);
-		redirect(base_url() . "/Admin/deleted");
-	}
-	public function delete_product()
-	{
-		$prod_id = $this->uri->segment(3);
-		$this->load->model("Admin_model");
-		$this->Admin_model->delete_product($prod_id);
-		redirect(base_url() . "/Admin/deleted");
+		$item_id = $this->uri->segment(3);
+		$this->load->model("model_admin");
+		$this->model_admin->delete_item($item_id);
+		redirect(base_url() . "/main/deleted");
 	}
 	public function deleted()
 	{
