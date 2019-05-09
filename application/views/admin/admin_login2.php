@@ -132,7 +132,7 @@ span.psw {
 
 
   
-  <form class="modal-content animate" action="<?php echo base_url('main/index');?>">
+  <form class="modal-content animate" action="<?php echo base_url('main/index2');?>">
     
 
     <div class="container">
@@ -143,7 +143,7 @@ span.psw {
       <input type="password" placeholder="Enter Password" name="psw" required>
         
       <button type="submit">Login</button>
-      <label>
+      <label>s
         <input type="checkbox" checked="checked" name="remember"> Remember me
       </label>
     </div>

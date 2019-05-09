@@ -25,7 +25,8 @@
 	</section>
 	<!--================End Banner Area =================-->
 	<section class="service_area section_gap">
-	<form class="mystyle" method="POST">
+
+	<!-- <form class="mystyle" method="POST">
 		<select name="location">
 			<option value="location" selected="">Select location</option>
 			<option value="Luzon">Luzon</option>
@@ -61,36 +62,59 @@
 		<button type="button" class="btn btn-info">
      		 <span class="glyphicon glyphicon-search"></span> Search
     	</button>
-	</form>
+	</form> -->
 	</section>
+
 	<div>
 		<div class="container" >
+			<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Available Hospitals</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+            </div>
+          </div>
             <form class="table">
-              <table class="table table-striped table-sm" >
+              <table class="table table-striped table-sm" frame="box">
                   <thead>
                       <tr>
                           
-                          <td>Donor ID</td>
-                          <td>Address</td>
-                          <td>Organ Type</td>
-                          <td>Blood Type</td>
-                          <td>Body Type</td>
+                          <td>Hospital</td>
+                          <td>Location</td>
+                          <td></td>
+                          <td></td>
+
                           
                       </tr>
                   </thead>
                   <tbody>
                       <?php 
-                      if($get_resource->num_rows() >0) 
+                      if($get_hospital->num_rows() >0) 
                       {
-                        foreach ($get_resource->result() as $row) {
+                        foreach ($get_hospital->result() as $row) {
                           ?>
                           <tr>
                             
-                            <td><?php echo $row->donor_id; ?></td>
-                            <td><?php echo $row->address; ?></td>
-                            <td><?php echo $row->organ_type; ?></td>
-                            <td><?php echo $row->blood_type; ?></td>
-                            <td><?php echo $row->body_type; ?></td>
+                            
+                            <td><?php echo $row->h_name; ?></td>
+                            <td><?php echo $row->h_location; ?></td>
+                            <td></td>
+                            <td><button onclick="document.getElementById('id01').style.display='block'" style="width:auto; border-radius: 8px;">Contact</button></td>
+                            <div id="id01" class="modal">
+							  
+							  <form class="modal-content animate" action="<?php echo base_url('Welcome/search')?>">
+							    
+							  	<div class="container">
+							    <table>
+							    	<tr>
+							 		
+							    	</tr>
+							    </table>
+                  				</div>
+                     </form>
+      </div>
+
+							
+						</div>
+                            
                             
                           </tr>
                           <?php 

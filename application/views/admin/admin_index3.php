@@ -1,41 +1,14 @@
 
-<!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <title>Hospice Admin</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url('assets/admin/bootstrap.min.css')?>" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="<?php echo base_url('assets/admin/dashboard.css')?>" rel="stylesheet">
-  </head>
-
-  <body>
-   <!-- Top Nav Bar -->
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Hospice Admin Dashboard</a>
-      <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-          <a class="nav-link" href="<?php echo base_url('main/login2')?>">Sign out</a>
-        </li>
-      </ul>
-    </nav>
-    <!-- End of Top Nav Bar -->
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Resources</h1>
+            <h1 class="h2">Messages</h1>
             
           </div>
 
        <!-- Top End of Dashboard -->
        <div class="w3-container">
-  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Add to Database</button>
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Compose Message</button>
 
   <div id="id01" class="w3-modal">
     <div class="w3-modal-content w3-animate-top w3-card-4">
@@ -103,36 +76,31 @@
     </div>
   </div>
 </div>
-         <div>
+         <div class="conta">
             <form class="table">
               <table class="table table-striped table-sm" frame="box">
                   <thead>
                       <tr>
-                          <th>Item ID</th>
-                          <th>Donor ID</th>
-                          <th>Address</th>
-                          <th>Organ Type</th>
-                          <th>Blood Type</th>
-                          <th>Body Type</th>
-                          <th>Action</th>
-                          
+                          <th>To</th>
+                          <th>From</th>
+                          <th>Time</th>
+                          <th>Subject</th>
+                          <th>Message</th>
                       </tr>
                   </thead>
                   <tbody>
                       <?php 
-                      if($get_resource->num_rows() >0) 
+                      if($get_message->num_rows() >0) 
                       {
-                        foreach ($get_resource->result() as $row) {
+                        foreach ($get_message->result() as $row) {
                           ?>
                           <tr>
-                            <td><?php echo $row->item_id; ?></td>
-                            <td><?php echo $row->d_id; ?></td>
-                            <td><?php echo $row->address; ?></td>
-                            <td><?php echo $row->organ_type; ?></td>
-                            <td><?php echo $row->blood_type; ?></td>
-                            <td><?php echo $row->body_type; ?></td>
-                            <td><a href="#" class="delete_item" id="<?php echo  $row->item_id; ?>">Delete</a></td>
-                            <td><a href="<?php echo base_url(); ?>main/update_item/<?php echo  $row->item_id; ?>">Edit</a></td>
+                            <td><?php echo $row->m_to; ?></td>
+                            <td><?php echo $row->m_from; ?></td>
+                            <td><?php echo $row->m_time; ?></td>
+                            <td><?php echo $row->m_subject; ?></td>
+                            <td><?php echo $row->m_message; ?></td>
+                            
                           </tr>
                           <?php 
                         }

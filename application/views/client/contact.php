@@ -26,8 +26,8 @@
                     <div class="contact_info">
                         <div class="info_item">
                             <i class="lnr lnr-home"></i>
-                            <h6>California, United States</h6>
-                            <p>Santa monica bullevard</p>
+                            <h6>Cebu, Philippines</h6>
+                            <p>Gorordo Ave.</p>
                         </div>
                         <div class="info_item">
                             <i class="lnr lnr-phone-handset"></i>
@@ -39,9 +39,9 @@
                         <div class="info_item">
                             <i class="lnr lnr-envelope"></i>
                             <h6>
-                                <a href="#">support@colorlib.com</a>
+                                <a href="#">hospicesupport@gmail.com</a>
                             </h6>
-                            <p>Send us your query anytime!</p>
+                            <p>Send us your questions anytime!</p>
                         </div>
                     </div>
                 </div>
