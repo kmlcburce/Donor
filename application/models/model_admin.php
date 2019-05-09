@@ -6,6 +6,7 @@ class model_admin extends CI_Model{
 		$query=$this->db->get("resource_table");
 		return $query;
 	}
+<<<<<<< HEAD
 	function get_user(){
 		$query=$this->db->get("user_table");
 		return $query;	}
@@ -17,6 +18,8 @@ class model_admin extends CI_Model{
 		$query=$this->db->get("hospital_table");
 		return $query;
 	}
+=======
+>>>>>>> 9123b5724c82738da6b8dd2e215d4df9145a1f51
 	function delete_item($item_id){
 		$this->db->where("item_id",$item_id);
 		$this->db->delete("resource_table");

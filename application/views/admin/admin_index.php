@@ -148,6 +148,7 @@
                   </tbody>
               </table>
             </form>
+<<<<<<< HEAD
             
             
 
@@ -157,3 +158,82 @@
 </div>
 
              
+=======
+
+            <form class="add_prod" method="post" action="<?php echo base_url()?>main/add_resource_validation">
+              <!-- Trigger the modal with a button -->
+                  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add item</button>
+
+                  <!-- Modal -->
+                  <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h4 class="modal-title">Add Item</h4>
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          
+                        </div>
+                        <div class="modal-body">
+                            
+                      <?php
+                        if ($this->uri->segment(2)=="added_item") {
+                            echo '<p class="text-success">Product Added</p>';
+                          }  
+                        ?>
+                      <div class="input-group-icon mt-10">
+                <div class="icon">
+                  
+                </div>
+                <input type="text" name="address" placeholder="Patient First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Patient First Name'"required class="form-control">
+                <input type="text" name="address" placeholder="Patient Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Patient Last Name'"required class="form-control">
+                <input type="text" name="address" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'"required class="form-control">
+                <input type="text" name="address" placeholder="Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Address'"
+                 required class="form-control">
+                 <span class="text-danger"><?php echo form_error("address");?></span>
+                </div>
+              <div class="form-select" id="default-select">
+                  <select name="organ_type">
+                    <option value="#">Select Organ-type</option>
+                    <option value="kidney">Kidney</option>
+                    <option value="lungs">Lungs</option>
+                    <option value="pancreas">Pancreas</option>
+                    <option value="liver">Liver</option>
+                    <option value="bone_marrow">Bone Marrow</option>
+                  </select>
+                </div>
+                <div class="form-select" id="default-select">
+                  <select name="blood_type">
+                    <option value="blood-type" selected="">Select Blood-type</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                  </select>
+                </div>
+                <div class="form-select" id="default-select">
+                    <select name="body_type">
+                      <option value="body-type" selected="">Select Body-type</option>
+                      <option value="Endomorph">Endomorph</option>
+                      <option value="Mesomorph">Mesomorph</option>
+                      <option value="Ectomorph">Ectomorph</option>
+                    </select>
+                </div>
+                      <span class="text-danger"><?php echo form_error("body_type");?></span>
+                      <input type="submit" name="ap_sub" value="Submit">
+                     </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+				              
+>>>>>>> 9123b5724c82738da6b8dd2e215d4df9145a1f51

@@ -22,10 +22,15 @@ class main extends CI_Controller {
 	{
 		$this->load->model("model_admin");
 		$data["get_resource"] = $this->model_admin->get_resource();
+<<<<<<< HEAD
 		$data2["get_user"]	= $this->model_admin->get_user();
 		$this->load->view("admin/admin_header");
 		$this->load->view("admin/admin_index",$data);
 		$this->load->view("admin/admin_index2",$data2);
+=======
+		$this->load->view("admin/admin_header");
+		$this->load->view("admin/admin_index",$data);
+>>>>>>> 9123b5724c82738da6b8dd2e215d4df9145a1f51
 		$this->load->view("admin/admin_footer");
 	}
 	public function index2(){

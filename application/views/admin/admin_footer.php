@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9123b5724c82738da6b8dd2e215d4df9145a1f51
 
 
 
@@ -15,7 +18,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 	<script src="<?php echo base_url('assets/scripts/mail-script.js');?>"></script>
 	<script src="<?php echo base_url('assets/scripts/custom.js');?>"></script>
+<<<<<<< HEAD
 	<!--   Delete  -->
+=======
+	<!--   Delete  Script-->
+>>>>>>> 9123b5724c82738da6b8dd2e215d4df9145a1f51
 	<script>
 	      $(document).ready(function(){
 	        $('.delete_item').click(function(){
@@ -29,7 +36,10 @@
 	        });
 	      });
 	</script>
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 9123b5724c82738da6b8dd2e215d4df9145a1f51
 </body>
 
 </html>
