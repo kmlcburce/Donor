@@ -6,27 +6,43 @@ class model_admin extends CI_Model{
 		$query=$this->db->get("resource_table");
 		return $query;
 	}
-<<<<<<< HEAD
 	function get_user(){
 		$query=$this->db->get("user_table");
 		return $query;	}
-		function get_message(){
+	function get_message(){
 			$query=$this->db->get("message_table");
 		return $query;
+		}
+	function validate(){
+		$data = array(
+			"r_email" 		=>$this->input->post("email"),
+			"r_password" 	=>md5($this->input->post("password")),
+		);
+		return $this->db->get_where('registration_table', $data);
 		}
 	function get_hospital(){
 		$query=$this->db->get("hospital_table");
 		return $query;
 	}
-=======
->>>>>>> 9123b5724c82738da6b8dd2e215d4df9145a1f51
+	function fetch_item_data()
+	{
+		$query = $this->db->get("resource_table");
+		return $query;
+	}
+	function add_donor($data){
+		$this->db->insert("donor_table", $data);
+	}
 	function delete_item($item_id){
 		$this->db->where("item_id",$item_id);
 		$this->db->delete("resource_table");
 	}
-	function add_resource($data)
+	function add_item($data)
 	{
 		$this->db->insert("resource_table", $data);
+	}
+	function add_message($data)
+	{
+		$this->db->insert("message_table", $data);
 	}
 	function fetch_single_item($item_id){
 		$this->db->where("item_id",$item_id);

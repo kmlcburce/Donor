@@ -9,51 +9,54 @@
 				<div class="banner_content row">
 					<div class="col-lg-12">
 						<h1>We Care for Your Health Every Moment</h1>
-						<p>Searching for organ donor members near you has never been made easier.</p>
+						<p>Searching for organ donor members near you has never been made easier. Click get started below to find the nearest hospital compatible for you</p>
 						<!-- <a class="main_btn mr-10" href="<?php echo base_url('Welcome/search')?>">get started</a> -->
 						<button onclick="document.getElementById('id01').style.display='block'" style="width:auto; border-radius: 8px;">Get Started</button>
 
 							<div id="id01" class="modal">
 							  
-							  <form class="modal-content animate" action="<?php echo base_url('Welcome/search')?>">
+							  <form class="modal-content animate" action="<?php echo base_url('Welcome/result')?>">
 							    
-							  	<div class="container">
-							    <div class="form-select" id="default-select">
-                  <select name="organ_type">
-                    <option value="#">Select Organ-type</option>
-                    <option value="kidney">Kidney</option>
-                    <option value="lungs">Lungs</option>
-                    <option value="pancreas">Pancreas</option>
-                    <option value="liver">Liver</option>
-                    <option value="bone_marrow">Bone Marrow</option>
-                  </select>
-                </div>
-                <div class="form-select" id="default-select">
-                  <select name="blood_type">
-                    <option value="blood-type" selected="">Select Blood-type</option>
-                    <option value="A+">A+</option>
-                    <option value="A-">A-</option>
-                    <option value="AB+">AB+</option>
-                    <option value="AB-">AB-</option>
-                    <option value="B+">B+</option>
-                    <option value="B-">B-</option>
-                    <option value="O+">O+</option>
-                    <option value="O-">O-</option>
-                  </select>
-                </div>
-                <div class="form-select" id="default-select">
-                    <select name="body_type">
-                      <option value="body-type" selected="">Select Body-type</option>
-                      <option value="Endomorph">Endomorph</option>
-                      <option value="Mesomorph">Mesomorph</option>
-                      <option value="Ectomorph">Ectomorph</option>
-                    </select>
-                </div>
-                      <span class="text-danger"><?php echo form_error("body_type");?></span>
-                      <button type="submit" name="ap_sub" value="Submit">Submit</button>
-                  </div>
-                     </form>
-      </div>
+							<div class="container">
+								<div class="justify-content-center">
+								<head>Please enter neccessary information</head>
+							</div>
+							<div class="form-select" id="default-select">
+				                  <select name="organ_type">
+				                    <option value="#">Select Desired Organ</option>
+				                    <option value="kidney">Kidney</option>
+				                    <option value="lungs">Lungs</option>
+				                    <option value="pancreas">Pancreas</option>
+				                    <option value="liver">Liver</option>
+				                    <option value="bone_marrow">Bone Marrow</option>
+				                  </select>
+				                </div>
+				                <div class="form-select" id="default-select">
+				                  <select name="blood_type">
+				                    <option value="blood-type" selected="">Select your Blood-type</option>
+				                    <option value="A+">A+</option>
+				                    <option value="A-">A-</option>
+				                    <option value="AB+">AB+</option>
+				                    <option value="AB-">AB-</option>
+				                    <option value="B+">B+</option>
+				                    <option value="B-">B-</option>
+				                    <option value="O+">O+</option>
+				                    <option value="O-">O-</option>
+				                  </select>
+				                </div>
+				                <div class="form-select" id="default-select">
+				                    <select name="body_type">
+				                      <option value="body-type" selected="">Select your Body-type</option>
+				                      <option value="Endomorph">Endomorph</option>
+				                      <option value="Mesomorph">Mesomorph</option>
+				                      <option value="Ectomorph">Ectomorph</option>
+				                    </select>
+				                </div>
+				                      <span class="text-danger"><?php echo form_error("body_type");?></span>
+				                      <button type="submit" name="ap_sub" value="Submit">Search</button>
+				                  </div>
+				                     </form>
+				      </div>
 
 							
 						</div>
@@ -128,7 +131,7 @@
 	<!--================ End Procedure Category Area =================-->
 
 	<!--================ Start Offered Services Area =================-->
-	<section class="service_area section_gap">
+	<section class="service_area">
 		<div class="container">
 			<div class="row justify-content-center section-title-wrap">
 				<div class="col-lg-12">
@@ -186,6 +189,9 @@
 				</div>
 			</div>
 		</div>
+	</section>
+	<section class="service_area section_gap">
+
 	</section>
 	<!--================ End Offered Services Area =================-->
 

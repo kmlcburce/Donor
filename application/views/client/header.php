@@ -142,6 +142,18 @@ span.psw {
      width: 100%;
   }
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
 </style>
 </head>
 
@@ -151,33 +163,6 @@ span.psw {
 
 	<!--================Header Menu Area =================-->
 	<header class="header_area">
-		<div class="top_menu row m0">
-			<div class="container">
-				<div class="float-left">
-					<ul class="left_side">
-						<li>
-							<p>For Inquiries</p>
-						</li>
-					</ul>
-				</div>
-				<div class="float-right">
-					<ul class="right_side">
-						<li>
-							<a href="#">
-								<i class="lnr lnr-phone-handset"></i>
-								012-6532-568-9746
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="lnr lnr-envelope"></i>
-								hospicesupport@gmail.com
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
@@ -205,6 +190,9 @@ span.psw {
 							
 									<li class="nav-item">
 										<a class="nav-link" href="<?php echo base_url('Welcome/contact')?>">Contact</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="<?php echo base_url('main/login')?>">Login</a>
 									</li>
 								</ul>
 							</div>

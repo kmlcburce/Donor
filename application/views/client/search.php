@@ -24,7 +24,7 @@
 		</div>
 	</section>
 	<!--================End Banner Area =================-->
-	<section class="service_area section_gap">
+	<section class="service_area">
 
 	<!-- <form class="mystyle" method="POST">
 		<select name="location">
@@ -80,7 +80,7 @@
                           <td>Hospital</td>
                           <td>Location</td>
                           <td></td>
-                          <td></td>
+                          
 
                           
                       </tr>
@@ -97,19 +97,64 @@
                             <td><?php echo $row->h_name; ?></td>
                             <td><?php echo $row->h_location; ?></td>
                             <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                             <td><button onclick="document.getElementById('id01').style.display='block'" style="width:auto; border-radius: 8px;">Contact</button></td>
                             <div id="id01" class="modal">
 							  
-							  <form class="modal-content animate" action="<?php echo base_url('Welcome/search')?>">
-							    
-							  	<div class="container">
-							    <table>
-							    	<tr>
-							 		
-							    	</tr>
-							    </table>
-                  				</div>
-                     </form>
+											           <div>
+				            <form class="table">
+				              <table class="table table-striped table-sm" frame="box">
+				                  <thead>
+				                      <tr>
+				                          <th>Contact</th>
+				                          <th>Email</th>
+
+				                          
+				                      </tr>
+				                  </thead>
+				                  <tbody>
+				                      <?php 
+				                      if() 
+				                      {
+				                        foreach () {
+				                          ?>
+				                          <tr>
+				                            <td>Dr. James Cabahug </td>
+				                            <td>jcabahug@gmail.com</td>
+				                          </tr>
+				                          <tr>
+				                            <td>Dr. Jane Caballes </td>
+				                            <td>jclle@gmail.com</td>
+				                          </tr>
+				                          <?php 
+				                        }
+				                      }
+				                      else{
+				                        ?>
+				                        <tr>
+				                          <td colspan="5">No Data Found</td>
+				                        </tr>
+				                        <?php
+				                      }
+				                      ?>
+				                  </tbody>
+				              </table>
+				            </form>
+            
+            
+
+
+    </div>
       </div>
 
 							

@@ -20,9 +20,43 @@
 	<!-- main css -->
 	<link rel="stylesheet" href="<?php echo base_url('assets/styles/style.css');?>">
 	<link rel="stylesheet" href="<?php echo base_url('assets/styles/responsive.css');?>">
+	<style>
+
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #dddddd;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  padding: 8px;
+}
+
+</style>
+
 </head>
 
-<body>
+
+
 
 
 

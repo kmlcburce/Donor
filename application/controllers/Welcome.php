@@ -20,19 +20,21 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		
 		$this->load->view('client/header');
 		$this->load->view('client/index');
 		$this->load->view('client/footer');
+
 		
 	}
-	public function search()
+	public function result()
 	{
 		$this->load->model("model_admin");
 		$data["get_hospital"] = $this->model_admin->get_hospital();
-		
+		$data2["get_user"] =	$this->model_admin->get_user();
 
 		$this->load->view('client/header');
-		$this->load->view('client/search', $data);
+		$this->load->view('client/result', $data);
 		$this->load->view('client/footer');
 	}
 	public function blog(){

@@ -98,17 +98,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 	<script src="<?php echo base_url('assets/scripts/mail-script.js');?>"></script>
 	<script src="<?php echo base_url('assets/scripts/custom.js');?>"></script>
-	<script>
-							// Get the modal
-							var modal = document.getElementById('id01');
-
-							// When the user clicks anywhere outside of the modal, close it
-							window.onclick = function(event) {
-							    if (event.target == modal) {
-							        modal.style.display = "none";
-							    }
-							}
-							</script>
+	
 </body>
 
 </html>
